@@ -5,6 +5,12 @@
   <title>Quickstart Test</title>
 </head>
 <body>
+  <script>
+    var ably = new Ably.Realtime('zIS2Kw.Pd5rhw:FFwSmcC5ihOvvLPh');
+    ably.connection.on('connected', function() {
+      alert("That was simple, you're now connected to Ably in realtime");
+    });
+  </script>
   <h1>Quickstart</h1>
   <p>Testing the quickstart guide.</p>
 </body>
