@@ -11,6 +11,7 @@
     channel.subscribe('greeting', function(message) {
       alert("Received a greeting message in realtime: " + message.data);
     });
+    channel.publish('greeting', 'hello!');
   </script>
   <h1>Quickstart</h1>
   <p>Testing the quickstart guide.</p>
