@@ -7,8 +7,9 @@
 <body>
   <script>
     var ably = new Ably.Realtime('zIS2Kw.Pd5rhw:FFwSmcC5ihOvvLPh');
-    ably.connection.on('connected', function() {
-      alert("That was simple, you're now connected to Ably in realtime");
+    var channel = ably.channels.get('quickstart');
+    channel.subscribe('greeting', function(message) {
+      alert("Received a greeting message in realtime: " + message.data);
     });
   </script>
   <h1>Quickstart</h1>
